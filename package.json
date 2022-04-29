@@ -20,7 +20,7 @@
     },
     "asar": false,
     "appId": "tk.mf7cli.electron_project_template",
-    "productName": "Electron Project Template",
+    "productName": "Electron_Project_Template",
     "files": [
       "main.js",
       "src/",
