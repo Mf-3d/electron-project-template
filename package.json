@@ -10,6 +10,14 @@
   "keywords": [],
   "author": "mf7cli",
   "license": "ISC",
+  "build": {
+    "publish": {
+      "provider": "github",
+      "owner": "mf-3d",
+      "repo": "electron-project-template",
+      "releaseType": "release"
+    }
+  },
   "dependencies": {
     "electron-store": "^8.0.1",
     "express": "^4.18.0",
