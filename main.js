@@ -46,7 +46,7 @@ let swin = {
   resizable: true,
   hasShadow:  true,
   width: 500,
-  height: 300,
+  height: 400,
   transparent: false,
   frame: true,
   toolbar: false,
@@ -77,7 +77,7 @@ const store = new Store({
 });
 
 // ポート設定
-let PORT = store.get('config.port',1212);
+let PORT = store.get('config.port',1213);
 
 
 //  API関連
@@ -151,7 +151,7 @@ function setIPC() {
   main.receive('toggle_settingvisiblity', (event, data) => {
     if(data.visible === true){
       // 表示させたいとき
-      main.nw(swin, swin_size, {Url: `http://localhost:${store.get(`config.port`)}/setting.html`});
+      main.nw(swin, swin_size, {Url: `http://localhost:${store.get(`config.port`, PORT)}/setting.html`});
     }
     else if(data.visible === false){
       // 非表示にさせたいとき
@@ -161,7 +161,7 @@ function setIPC() {
     else{
       // 切替するとき
       if(swin_visible === false){
-        main.nw(swin, swin_size, {Url: `http://localhost:${store.get(`config.port`)}/setting.html`});
+        main.nw(swin, swin_size, {Url: `http://localhost:${store.get(`config.port`, PORT)}/setting.html`});
       }
       else if(swin_visible === true){
         main.close(swin.name);
