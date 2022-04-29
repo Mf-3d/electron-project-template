@@ -16,6 +16,25 @@
       "owner": "mf-3d",
       "repo": "electron-project-template",
       "releaseType": "release"
+    },
+    "asar": false,
+    "appId": "tk.mf7cli.electron_project_template",
+    "productName": "Electron Project Template",
+    "files": [
+      "main.js",
+      "src/",
+      "package.json",
+      "package-lock.json",
+      "node_modules/"
+    ],
+    "win": {
+      "icon": "src/image/logo.ico",
+      "target": "nsis",
+      "legalTrademarks": "Copyright 2022 mf7cli."
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     }
   },
   "dependencies": {
